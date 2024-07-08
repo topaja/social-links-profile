@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
+/* CSS Variables */
+:root {
+  --green: hsl(75, 94%, 57%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --grey: hsl(0, 0%, 20%);
+  --black: hsl(0, 0%, 8%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,85 +16,91 @@
   font-size: 14px;
 }
 
+/* background container */
 .container {
-  width: 100%;
   min-height: 100vh;
-  background-color: hsl(0, 0%, 8%);
+  background-color: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 
+/* main card */
 .content {
   width: 350px;
-  height: 510px;
-  background-color: hsl(0, 0%, 12%);
+  padding: 35px;
+  background-color: var(--dark-grey);
   border-radius: 10px;
   text-align: center;
 }
+
+/* profile image */
 img {
   border-radius: 100px;
   width: 80px;
-  margin-top: 35px;
 }
+
+/* details section of the profile holder */
 .name {
   font-size: 20px;
   color: white;
   margin: 20px 0 10px 0;
 }
+
 .place {
   font-size: 12px;
-  color: hsl(75, 94%, 57%);
+  color: var(--green);
 }
+
 .about {
   color: hsl(0, 1%, 47%);
   margin: 20px 0;
 }
+
+/* all links section */
 .links {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.btn a {
+
+.list a {
   text-decoration: none;
   color: white;
   width: 100%;
   display: block;
 }
-.btn {
+ul {
+  list-style: none;
+}
+.list {
   width: 300px;
-  margin: 10px 0;
+  margin: 13px 0;
   padding: 10px 0;
   text-align: center;
-  background-color: hsl(0, 0%, 20%);
+  background-color: var(--grey);
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   font-weight: bold;
-   transition: background-color 0.3s ease, color 0.3s ease;
-}
-.btn:hover{
-    background-color: hsl(75, 94%, 57%);
-}
-.btn:hover a {
-    color: hsl(0, 0%, 8%);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* hover effect */
+.list:hover {
+  background-color: var(--green);
+}
+.list:hover a {
+  color: var(--black);
+}
 
+/* media query section */
 @media only screen and (max-width: 375px) {
   .content {
     width: 300px;
-    height: 550px;
   }
-  .btn {
-  width: 240px;
-  margin: 10px 0;
-  padding: 10px 0;
-  text-align: center;
-  background-color: hsl(0, 0%, 20%);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
+  .list {
+    width: 240px;
+    margin: 10px 0;
+  }
 }
