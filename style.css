@@ -50,6 +50,8 @@ img {
 .btn a {
   text-decoration: none;
   color: white;
+  width: 100%;
+  display: block;
 }
 .btn {
   width: 300px;
@@ -61,6 +63,13 @@ img {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn:hover{
+    background-color: hsl(75, 94%, 57%);
+}
+.btn:hover a {
+    color: hsl(0, 0%, 8%);
 }
 
 
